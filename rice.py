@@ -29,10 +29,10 @@ def process_commodity_data(file_path, sheet_name, output_file, shapefile_list_cs
     # Format: "Name in DA Data": "Exact Name in Shapefile"
     # ---------------------------------------------------------
     name_corrections = {
-        "Iloilo City": "City Of Iloilo",
-        "Passi City": "City Of Passi",
-        "Roxas City": "City Of Roxas",
-        "Roxas": "City Of Roxas", 
+        "Iloilo City": "City of Iloilo",
+        "Passi City": "City of Passi",
+        "Roxas City": "City of Roxas",
+        "Roxas": "City of Roxas", 
         "Ma-Ayon": "Ma-Ayon", 
         "Sapi-An": "Sapi-An",
         "Laua-An": "Laua-An",
@@ -72,7 +72,9 @@ def process_commodity_data(file_path, sheet_name, output_file, shapefile_list_cs
         else:
             if current_province is not None:
                 # 1. Clean and Title Case the DA name
-                muni_name = loc.title()
+                # muni_name = loc.title()
+                muni_name = loc
+                # print(loc)
                 
                 # 2. Check if this name needs to be fixed for QGIS
                 if muni_name in name_corrections:
@@ -97,7 +99,8 @@ def process_commodity_data(file_path, sheet_name, output_file, shapefile_list_cs
     try:
         df_shp = pd.read_csv(shapefile_list_csv)
         # Standardize the shapefile names to Title Case for comparison
-        shp_munis = set(df_shp['adm3_en'].astype(str).str.strip().str.title())
+        #shp_munis = set(df_shp['adm3_en'].astype(str).str.strip().str.title())
+        shp_munis = set(df_shp['adm3_en'].astype(str).str.strip())
     except Exception as e:
         print(f"❌ Error loading Shapefile list '{shapefile_list_csv}': {e}")
         print("Aborting. Cannot validate without the master list.")
