@@ -1,0 +1,102 @@
+Province,Municipality,Area,Production,Yield
+Aklan,Altavas,0.0,0.0,0.0
+Aklan,Balete,1.15,0.0,0.0
+Aklan,Banga,0.0,0.0,0.0
+Aklan,Batan,1.06,6.8,6.415094339622641
+Aklan,Buruanga,0.0,0.0,0.0
+Aklan,Ibajay,7.0,7.76,1.1085714285714283
+Aklan,Kalibo,1.0,6.0,6.0
+Aklan,Lezo,0.0,0.0,0.0
+Aklan,Libacao,0.0,0.0,0.0
+Aklan,Madalag,0.0,0.0,0.0
+Aklan,Makato,0.0,0.0,0.0
+Aklan,Malay,0.0,0.0,0.0
+Aklan,Malinao,0.0,0.0,0.0
+Aklan,Nabas,0.35,4.300000000000001,12.285714285714288
+Aklan,New Washington,0.0,0.0,0.0
+Aklan,Numancia,173.0,6.2,0.0358381502890173
+Aklan,Tangalan,0.0,0.0,0.0
+Antique,Anini-Y,4.9244,30.235,6.139834294533344
+Antique,Barbaza,0.0,0.0,0.0
+Antique,Belison,0.0,0.0,0.0
+Antique,Bugasong,1.733,28.0,16.156953260242357
+Antique,Caluya,3.07,21.7,7.068403908794789
+Antique,Culasi,0.38,7.5,19.73684210526316
+Antique,Hamtic,0.0,0.0,0.0
+Antique,Laua-An,0.0,0.0,0.0
+Antique,Libertad,0.36,8.6,23.88888888888889
+Antique,Pandan,2.13,15.98,7.502347417840376
+Antique,Patnongon,11.62,159.16000000000005,13.697074010327023
+Antique,San Jose,0.0,0.0,0.0
+Antique,San Remigio,0.0,0.0,0.0
+Antique,Sebaste,0.0,0.0,0.0
+Antique,Sibalom,3.34,57.169999999999995,17.11676646706587
+Antique,Tibiao,0.0,0.0,0.0
+Antique,Tobias Fornier,4.41,82.4,18.68480725623583
+Antique,Valderrama,0.88,15.66,17.795454545454547
+Capiz,Cuartero,0.0,0.0,0.0
+Capiz,Dao,0.0,0.0,0.0
+Capiz,Dumalag,0.0,0.0,0.0
+Capiz,Dumarao,0.0,0.0,0.0
+Capiz,Ivisan,0.0,0.0,0.0
+Capiz,Jamindan,0.0,0.0,0.0
+Capiz,Ma-Ayon,0.0,0.0,0.0
+Capiz,Mambusao,0.0,0.0,0.0
+Capiz,Panay,69.5,277.2,3.9884892086330934
+Capiz,Panitan,11.0,20.0,1.818181818181818
+Capiz,Pilar,0.0,0.0,0.0
+Capiz,Pontevedra,0.0,0.0,0.0
+Capiz,President Roxas,0.0,0.0,0.0
+Capiz,City of Roxas,1.0,0.5,0.5
+Capiz,Sapi-An,0.0,0.0,0.0
+Capiz,Sigma,0.0,0.0,0.0
+Capiz,Tapaz,0.0,0.0,0.0
+Guimaras,Buenavista,1.5,47.75,31.833333333333332
+Guimaras,Jordan,0.0,71.7,0.0
+Guimaras,Nueva Valencia,39.650000000000006,398.5200000000001,10.05094577553594
+Guimaras,San Lorenzo,1.5,69.087,46.058
+Guimaras,Sibunag,37.3,206.6,5.5388739946380685
+Iloilo,Ajuy,0.0,0.0,0.0
+Iloilo,Alimodian,7.0,64.0,9.142857142857142
+Iloilo,Anilao,12.0,125.0,10.416666666666666
+Iloilo,Badiangan,1.75,2.62,1.497142857142857
+Iloilo,Balasan,0.0,0.0,0.0
+Iloilo,Banate,0.0,0.0,0.0
+Iloilo,Barotac Nuevo,0.0,0.0,0.0
+Iloilo,Barotac Viejo,0.0,0.0,0.0
+Iloilo,Batad,0.0,0.0,0.0
+Iloilo,Bingawan,0.0,0.0,0.0
+Iloilo,Cabatuan,1800.0,130.0,0.0722222222222222
+Iloilo,Calinog,0.0,0.0,0.0
+Iloilo,Carles,29.2,71.4,2.445205479452055
+Iloilo,Concepcion,0.0,0.0,0.0
+Iloilo,Dingle,0.0,0.0,0.0
+Iloilo,Dueñas,0.0,0.0,0.0
+Iloilo,Dumangas,12.0,39.0,3.25
+Iloilo,Estancia,23.25,3.0,0.1290322580645161
+Iloilo,Guimbal,0.425,5.0,11.764705882352942
+Iloilo,Igbaras,0.3,48.7,162.33333333333334
+Iloilo,City of Iloilo,0.0,0.0,0.0
+Iloilo,Janiuay,0.0,0.0,0.0
+Iloilo,Lambunao,0.0,0.0,0.0
+Iloilo,Leganes,4.3999999999999995,5.4799999999999995,1.2454545454545456
+Iloilo,Lemery,0.0,0.0,0.0
+Iloilo,Leon,14.6,963.6,66.0
+Iloilo,Maasin,0.0,0.0,0.0
+Iloilo,Miagao,0.0,0.0,0.0
+Iloilo,Mina,0.0,0.0,0.0
+Iloilo,New Lucena,0.0,0.0,0.0
+Iloilo,Oton,2.0,8.0,4.0
+Iloilo,City of Passi,0.0,0.0,0.0
+Iloilo,Pavia,0.0,0.0,0.0
+Iloilo,Pototan,0.0,0.0,0.0
+Iloilo,San Dionisio,44.0,46.0,1.0454545454545454
+Iloilo,San Enrique,0.0,0.0,0.0
+Iloilo,San Miguel,0.0,0.0,0.0
+Iloilo,San Joaquin,0.0,0.0,0.0
+Iloilo,San Rafael,0.0,0.0,0.0
+Iloilo,Santa Barbara,0.0,0.0,0.0
+Iloilo,Sara,0.0,0.0,0.0
+Iloilo,Tigbauan,45.0,62.0,1.3777777777777778
+Iloilo,Tubungan,0.0,0.0,0.0
+Iloilo,Zarraga,0.0,0.0,0.0

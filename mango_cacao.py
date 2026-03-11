@@ -3,7 +3,7 @@ import pandas as pd
 def process_mango_cacao(file_path, sheet_name, output_file_cacao, output_file_mango, shapefile_list_csv):
     """
     Parses DA Mango & Cacao Excel data, extracts metrics, fixes spelling mismatches,
-    preserves exact Shapefile capitalization, and separates outputs into two CSVs.
+    preserves exact Shapefile capitalization (e.g. "City of Roxas").
     """
     print(f"🥭🍫 Loading Mango & Cacao data from '{file_path}' (Sheet: '{sheet_name}')...")
     
@@ -42,8 +42,7 @@ def process_mango_cacao(file_path, sheet_name, output_file_cacao, output_file_ma
         "LAUA-AN": "Laua-An",
         "ANINI-Y": "Anini-Y",
         "TIBIAO": "Tibiao",
-        "LAUAAN": "Laua-An",
-        "SAPI-AN": "Sapi-An"
+        "LAUAAN": "Laua-An"
     }
 
     # Load shapefile master list FIRST to get exact intended spellings
@@ -96,25 +95,25 @@ def process_mango_cacao(file_path, sheet_name, output_file_cacao, output_file_ma
                     final_muni_name = name_corrections[loc_upper]
                 
                 # 2. If no manual correction, try to match it directly to the shapefile mapping
-            # This perfectly preserves things like "Ma-ayon" or "City of Roxas"
-            elif loc_upper in shp_name_map:
-                final_muni_name = shp_name_map[loc_upper]
+                # This perfectly preserves things like "Ma-ayon" or "City of Roxas"
+                elif loc_upper in shp_name_map:
+                    final_muni_name = shp_name_map[loc_upper]
 
-            cacao_data.append({
-                'Province': current_province,
-                'Municipality': final_muni_name,
-                'Area': clean_numeric(row['Cacao_Area']),
-                'Production': clean_numeric(row['Cacao_Production']),
-                'Yield': clean_numeric(row['Cacao_Yield'])
-            })
-            
-            mango_data.append({
-                'Province': current_province,
-                'Municipality': final_muni_name,
-                'Area': clean_numeric(row['Mango_Area']),
-                'Production': clean_numeric(row['Mango_Production']),
-                'Yield': clean_numeric(row['Mango_Yield'])
-            })
+                cacao_data.append({
+                    'Province': current_province,
+                    'Municipality': final_muni_name,
+                    'Area': clean_numeric(row['Cacao_Area']),
+                    'Production': clean_numeric(row['Cacao_Production']),
+                    'Yield': clean_numeric(row['Cacao_Yield'])
+                })
+                
+                mango_data.append({
+                    'Province': current_province,
+                    'Municipality': final_muni_name,
+                    'Area': clean_numeric(row['Mango_Area']),
+                    'Production': clean_numeric(row['Mango_Production']),
+                    'Yield': clean_numeric(row['Mango_Yield'])
+                })
 
     df_cacao = pd.DataFrame(cacao_data)
     df_mango = pd.DataFrame(mango_data)
@@ -124,14 +123,14 @@ def process_mango_cacao(file_path, sheet_name, output_file_cacao, output_file_ma
     # =========================================================
     print(f"Validating municipalities against shapefile master list...")
     
-    # Check using exact spellings (both dataframes have the exact same municipalities)
+    # Check using exact spellings
     da_munis = set(df_cacao['Municipality'])
     shp_munis_exact = set(df_shp['adm3_en'].astype(str).str.strip())
     
     unmatched = da_munis - shp_munis_exact
 
     if len(unmatched) > 0:
-        print("\n❌ ERROR: Mismatches found! The CSVs will NOT be generated.")
+        print("\n❌ ERROR: Mismatches found! The CSV will NOT be generated.")
         print("The following municipalities from the dataset don't exactly match your shapefile:")
         for muni in unmatched:
             print(f" - {muni}")
